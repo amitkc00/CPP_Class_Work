@@ -1,0 +1,1 @@
+g++ -g -c -Wall Rolodex.cpp Rolodex.h Card.h

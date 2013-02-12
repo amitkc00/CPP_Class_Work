@@ -1,0 +1,94 @@
+// Overloading +,-,postfix(++,--),prefix(++,--),=,+=,-=,int casting.
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+#ifndef _INT_H
+#define _INT_H
+
+class INT {
+
+	friend void operator=(INT a);   //Assignment Operator
+	friend void operator=(int a);   //Assignment Operator
+	friend int operator-(INT a) ;
+	friend void operator*(INT a);
+	friend INT operator+(INT a); 
+	friend INT operator-=(INT a); 
+	friend INT operator+=(INT a);
+	friend ostream& operator<<(ostream&,INT a);
+	
+	
+	private:
+		int num;	
+
+	public:	
+		INT(int input=0) ;  	//Default Constructor
+		INT operator++(); 	//Prefix
+		INT operator++(int i); 	//Postfix
+		INT operator--(); 	//Prefix
+		INT operator--(int i);  //Postfix
+
+}
+
+
+//Default Constructor
+INT::INT(int input) {
+	num=input;
+}
+
+//Assignment Operator
+INT INT::operator=(INT a){
+	num=a;
+	//return num;
+
+}
+
+INT INT::operator-(INT a){
+	int temp = num-a;
+	return temp;
+
+}
+
+INT INT::operator+(INT a) {
+	int temp = num+a;
+	return temp;
+
+}
+
+INT INT::operator-=(INT a){
+	num=num-a;
+	return num;	
+}
+
+INT INT::operator+=(INT a) {
+	num=num+1;
+	return num;
+}
+
+//Prefix
+INT INT::operator++() {
+	return ++num;
+}
+
+//Post-fix
+INT INT::operator++(int i){
+	return num++;
+}
+
+INT INT::operator--() {
+	return --num;
+}
+
+INT INT::operator--() {
+	return *this.num--;
+}
+
+ostream& operator<<(ostream& output,INT a) {
+	output<<return a.num;
+	return output;
+
+}
+#endif
+

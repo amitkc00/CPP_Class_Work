@@ -1,0 +1,46 @@
+Rolodex.cpp: In function ‘void add(Card*)’:
+Rolodex.cpp:16: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp: In function ‘Card* getCurrentCard()’:
+Rolodex.cpp:27: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp: In function ‘void flip()’:
+Rolodex.cpp:32: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp: In function ‘int search(std::string)’:
+Rolodex.cpp:38: error: no match for ‘operator=’ in ‘i = listRolodex.std::list<_Tp, _Alloc>::begin [with _Tp = Card*, _Alloc = std::allocator<Card*>]()’
+/usr/include/c++/4.3/bits/stl_list.h:112: note: candidates are: std::_List_iterator<Card>& std::_List_iterator<Card>::operator=(const std::_List_iterator<Card>&)
+Rolodex.cpp:38: error: no match for ‘operator!=’ in ‘i != listRolodex.std::list<_Tp, _Alloc>::end [with _Tp = Card*, _Alloc = std::allocator<Card*>]()’
+/usr/include/c++/4.3/bits/stl_list.h:173: note: candidates are: bool std::_List_iterator<_Tp>::operator!=(const std::_List_iterator<_Tp>&) const [with _Tp = Card]
+Card.h:15: error: ‘std::string Card::last_name’ is private
+Rolodex.cpp:39: error: within this context
+Rolodex.cpp:40: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp: In function ‘void show()’:
+Rolodex.cpp:52: error: no match for ‘operator=’ in ‘i = listRolodex.std::list<_Tp, _Alloc>::begin [with _Tp = Card*, _Alloc = std::allocator<Card*>]()’
+/usr/include/c++/4.3/bits/stl_list.h:112: note: candidates are: std::_List_iterator<Card>& std::_List_iterator<Card>::operator=(const std::_List_iterator<Card>&)
+Rolodex.cpp:52: error: no match for ‘operator!=’ in ‘i != listRolodex.std::list<_Tp, _Alloc>::end [with _Tp = Card*, _Alloc = std::allocator<Card*>]()’
+/usr/include/c++/4.3/bits/stl_list.h:173: note: candidates are: bool std::_List_iterator<_Tp>::operator!=(const std::_List_iterator<_Tp>&) const [with _Tp = Card]
+Rolodex.cpp:53: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp:54: error: cannot call member function ‘void Card::displayCardData()’ without object
+Card.h: In function ‘void modify(int, std::string)’:
+Card.h:14: error: ‘std::string Card::first_name’ is private
+Rolodex.cpp:65: error: within this context
+Card.h:15: error: ‘std::string Card::last_name’ is private
+Rolodex.cpp:69: error: within this context
+Rolodex.cpp:69: error: no match for ‘operator=’ in ‘std::operator>> [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((std::basic_istream<char, std::char_traits<char> >&)(& std::cin)), ((std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& CardObject3->Card::last_name))) = newValue’
+/usr/include/c++/4.3/iosfwd:58: note: candidates are: std::basic_istream<char, std::char_traits<char> >& std::basic_istream<char, std::char_traits<char> >::operator=(const std::basic_istream<char, std::char_traits<char> >&)
+Card.h:16: error: ‘std::string Card::occupation’ is private
+Rolodex.cpp:73: error: within this context
+Rolodex.cpp:73: error: no match for ‘operator=’ in ‘std::operator>> [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((std::basic_istream<char, std::char_traits<char> >&)(& std::cin)), ((std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& CardObject3->Card::occupation))) = newValue’
+/usr/include/c++/4.3/iosfwd:58: note: candidates are: std::basic_istream<char, std::char_traits<char> >& std::basic_istream<char, std::char_traits<char> >::operator=(const std::basic_istream<char, std::char_traits<char> >&)
+Card.h:17: error: ‘std::string Card::address’ is private
+Rolodex.cpp:77: error: within this context
+Rolodex.cpp:77: error: no match for ‘operator=’ in ‘std::operator>> [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((std::basic_istream<char, std::char_traits<char> >&)(& std::cin)), ((std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& CardObject3->Card::address))) = newValue’
+/usr/include/c++/4.3/iosfwd:58: note: candidates are: std::basic_istream<char, std::char_traits<char> >& std::basic_istream<char, std::char_traits<char> >::operator=(const std::basic_istream<char, std::char_traits<char> >&)
+Card.h:18: error: ‘std::string Card::phone_no’ is private
+Rolodex.cpp:81: error: within this context
+Rolodex.cpp:81: error: no match for ‘operator=’ in ‘std::operator>> [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((std::basic_istream<char, std::char_traits<char> >&)(& std::cin)), ((std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& CardObject3->Card::phone_no))) = newValue’
+/usr/include/c++/4.3/iosfwd:58: note: candidates are: std::basic_istream<char, std::char_traits<char> >& std::basic_istream<char, std::char_traits<char> >::operator=(const std::basic_istream<char, std::char_traits<char> >&)
+Rolodex.cpp: In function ‘void remove(Card*)’:
+Rolodex.cpp:92: error: ‘CurrentCardPtr’ was not declared in this scope
+Rolodex.cpp: In function ‘void CurrentCard()’:
+Rolodex.cpp:96: error: ‘CurrentCardPtr’ was not declared in this scope
+make: *** [Rolodex.o] Error 1
+
