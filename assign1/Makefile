@@ -1,8 +1,8 @@
-date: DateDemo.o Date.o
-	g++ -o date DateDemo.o Date.o
+dateRun: DateDemo.o DateClass.o
+	g++ -o dateRun DateDemo.o DateClass.o
 
 DateDemo.o: DateDemo.cpp Date.h
-	g++ -o DateDemo.cpp Date.h
+	g++ -c -o DateDemo.o DateDemo.cpp Date.h
 
-Date.o: Date.cpp Date.h
-	g++ -o Date.cpp Date.h
+DateClass.o: DateClass.cpp Date.h
+	g++ -c -o DateClass.o DateClass.cpp Date.h

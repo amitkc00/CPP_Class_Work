@@ -1,20 +1,24 @@
-#include<Date.h>
-int daysInMonth;
+//DateClass.cpp
 
-Date(int dy=1,int mh=1,int yr=2000) {
-	if(yr !>= 1900)
-		year=1900;
+
+#include "Date.h"
+//int daysInMonth;
+
+/*
+Date::Date(int dy = 1,int mh = 1,int yr = 2000) {
+	if(yr >= 1900)
+		year=yr;
 	else
-		year=yr;	
+		year=1900;	
 
 	if(mh<1 && mh > 12)
 		month = 1;
 	else
 		month = mh;
 
-	if(month==1||month==3||month==5||month==7||month==8||month==10||month==12)
+	if (month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12)
 		daysInMonth=31;
-	else if(month==4||month==6||month==9||month==11)
+	else if (month==4 || month==6 || month==9 || month==11)
 		daysInMonth=30;
 	else
 		daysInMonth=28;
@@ -24,12 +28,15 @@ Date(int dy=1,int mh=1,int yr=2000) {
 	else
 		day=dy;
 }
+
+*/
+
 //void getDay();    
 //void getMonth();
 //void getYear();
                 
-string getMonthName() {
-	swtich(month) {
+string Date::getMonthName() {
+	switch(month) {
 		case 1:
 			return "January";
 		case 2:
@@ -57,11 +64,12 @@ string getMonthName() {
 	}
 }
 
-void print()
+void Date::print()
 {
-	cout<<month<<"\"<<day<<"\"<<year;
+	//cout<<month<<"\"<<day<<"\"<<year;
+	cout<<month<<day<<year;
 }
 
-void printLong() {
+void Date::printLong() {
 	cout<<day<<" "<<getMonthName()<<" "<<year;
 }
